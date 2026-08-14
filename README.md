@@ -59,11 +59,12 @@ Each script also runs standalone (`python scripts/group_detection.py`, etc.) if 
 
 `ad_selection.py` implements and benchmarks three approaches against the same group data:
 
-| Strategy | Logic | Status |
-|---|---|---|
-| Majority-class | Each member votes independently, no weighting, no safety check | Baseline only — fails the child-safety test outright, not deployable |
-| Weighted cascade | Child check first as a hard override, then confidence-weighted rule matching | **Deployed** |
-| K-modes persona | Reuses the persona clusters from `cluster_audience.py`, maps cluster centroid to nearest category | Matches the cascade on the safety test; kept for comparison |
+
+| Majority-class: Each member votes independently, no weighting, no safety check | Baseline only — fails the child-safety test outright, not deployable 
+
+| Weighted cascade: Child check first as a hard override, then confidence-weighted rule matching ---deployed.
+
+| K-modes persona: Reuses the persona clusters from `cluster_audience.py`, maps cluster centroid to nearest category | Matches the cascade on the safety test; kept for comparison 
 
 A category has to beat the runner-up by at least 15% of its own score or the group falls back to `Neutral-Fallback` instead of guessing on a near-tie. Groups with no attribute data at all get the same fallback; groups with partial data use whichever members actually have it.
 
