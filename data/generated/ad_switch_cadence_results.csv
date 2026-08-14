@@ -1,0 +1,6 @@
+debounce_frames,debounce_seconds,real_switches,avg_seconds_between_switches
+0,0.0,29,10.21
+15,0.5,21,14.11
+30,1.0,20,14.81
+45,1.5,19,15.59
+90,3.0,17,17.43

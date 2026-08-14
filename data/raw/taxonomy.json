@@ -1,0 +1,43 @@
+{
+  "_comment": "Ad category taxonomy. Family/Child-safe and Neutral-Fallback are NOT rule-scored -- they are assigned entirely by the safety override and the missing-data fallback in ad_selection.py, respectively.",
+
+  "Teen/Sportswear": {
+    "exclusive": {
+      "Lower-body clothing": { "Shorts": 1.0, "Jeans": 0.5 }
+    },
+    "multihot": {
+      "Posture and Movement::Running": 1.5,
+      "Posture and Movement::Riding a bicycle": 1.5,
+      "Posture and Movement::Riding an scooter": 1.5,
+      "Posture and Movement::Riding a skateboard": 1.5
+    }
+  },
+
+  "Formal-Adult": {
+    "exclusive": {
+      "Upper-body clothing": {
+        "Suit": 2.0, "Coat": 1.0, "Jacket": 0.5,
+        "Cotton-padded coat": 0.5, "Graduation gown": 2.0
+      },
+      "Lower-body clothing": { "Dress": 1.0, "Long skirt": 1.0 }
+    },
+    "multihot": {}
+  },
+
+  "Elderly": {
+    "exclusive": {
+      "Age": { "Elderly": 3.0 }
+    },
+    "multihot": {}
+  },
+
+  "Casual-Adult": {
+    "exclusive": {
+      "Upper-body clothing": {
+        "Shirt": 0.5, "Short sleeves": 0.3, "Long sleeves": 0.3, "Vest": 0.3
+      },
+      "Lower-body clothing": { "Trousers": 0.5, "Jeans": 0.5 }
+    },
+    "multihot": {}
+  }
+}

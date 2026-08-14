@@ -1,0 +1,9 @@
+Check,Result
+Agreement: majority_class vs weighted_cascade,81.8%
+Agreement: majority_class vs kmodes,93.4%
+Agreement: weighted_cascade vs kmodes,81.5%
+Safety test: majority_class correct,0/4
+Safety test: weighted_cascade correct,4/4
+Safety test: kmodes correct,4/4
+Missing-data test suite,"10 passed, 0 failed"
+Known limitation (resolved),kmodes now uses nearest-centroid inference for tracks outside its original fit

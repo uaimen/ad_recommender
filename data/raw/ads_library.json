@@ -1,0 +1,80 @@
+{
+  "Family/Child-safe": [
+    {
+      "ad_id": "FAM-001",
+      "title": "Sunny Days Family Fun Pass",
+      "tagline": "Kids under 12 go free this weekend at the City Adventure Park",
+      "trigger": "child_present == True (hard safety override, applied before any scoring)"
+    },
+    {
+      "ad_id": "FAM-002",
+      "title": "LittleSteps Sneakers",
+      "tagline": "Comfy shoes built for busy little feet",
+      "trigger": "child_present == True (hard safety override, applied before any scoring)"
+    }
+  ],
+  "Teen/Sportswear": [
+    {
+      "ad_id": "TEEN-001",
+      "title": "PulseFit Running Gear",
+      "tagline": "Lace up. Level up.",
+      "trigger": "Lower-body clothing in {Shorts, Jeans} OR Posture in {Running, Riding a bicycle, Riding a scooter, Riding a skateboard}"
+    },
+    {
+      "ad_id": "TEEN-002",
+      "title": "SplashZone Energy Drink",
+      "tagline": "Fuel for whatever you're chasing",
+      "trigger": "Lower-body clothing in {Shorts, Jeans} OR Posture in {Running, Riding a bicycle, Riding a scooter, Riding a skateboard}"
+    }
+  ],
+  "Formal-Adult": [
+    {
+      "ad_id": "FORM-001",
+      "title": "Meridian Watches",
+      "tagline": "Timeless, for the moments that matter",
+      "trigger": "Upper-body clothing in {Suit, Coat, Jacket, Graduation gown} OR Lower-body clothing in {Dress, Long skirt}"
+    },
+    {
+      "ad_id": "FORM-002",
+      "title": "The Oak Room Restaurant",
+      "tagline": "Reservations open for tonight",
+      "trigger": "Upper-body clothing in {Suit, Coat, Jacket, Graduation gown} OR Lower-body clothing in {Dress, Long skirt}"
+    }
+  ],
+  "Casual-Adult": [
+    {
+      "ad_id": "CAS-001",
+      "title": "Everyday Basics Co.",
+      "tagline": "Simple clothes, well made",
+      "trigger": "Default adult category -- Upper/Lower clothing in common everyday items (Shirt, Trousers, Jeans), used when no stronger category signal is present"
+    },
+    {
+      "ad_id": "CAS-002",
+      "title": "QuickBite Café",
+      "tagline": "Good coffee, no line",
+      "trigger": "Default adult category -- Upper/Lower clothing in common everyday items (Shirt, Trousers, Jeans), used when no stronger category signal is present"
+    }
+  ],
+  "Elderly": [
+    {
+      "ad_id": "ELD-001",
+      "title": "ComfortStep Walking Shoes",
+      "tagline": "Support that moves with you",
+      "trigger": "Age == Elderly"
+    },
+    {
+      "ad_id": "ELD-002",
+      "title": "Harborview Health Clinic",
+      "tagline": "Same-day appointments, no rush",
+      "trigger": "Age == Elderly"
+    }
+  ],
+  "Neutral-Fallback": [
+    {
+      "ad_id": "NEU-001",
+      "title": "City Transit Card",
+      "tagline": "One card, every ride",
+      "trigger": "No attribute data available for any member of the group (attribute_observations == 0), OR no rule matched confidently -- generic, non-targeted content only"
+    }
+  ]
+}

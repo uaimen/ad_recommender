@@ -1,0 +1,20 @@
+{
+  "input_video": "/home/niche-6/Downloads/pipeline/videos/people_in_park.mp4",
+  "frames": 8878,
+  "source_fps": 29.97002997002997,
+  "elapsed_seconds": 1911.975,
+  "end_to_end_fps": 4.643,
+  "tracks": 323,
+  "mean_stage_latency_ms": {
+    "detection_ms": 22.554,
+    "tracking_ms": 112.951,
+    "attributes_ms": 54.59,
+    "rendering_ms": 4.952,
+    "total_ms": 195.048
+  },
+  "outputs": {
+    "video": "/home/niche-6/Downloads/pipeline/outputs/people_in_park/annotated.mp4",
+    "frames": "/home/niche-6/Downloads/pipeline/outputs/people_in_park/frames.jsonl",
+    "tracks": "/home/niche-6/Downloads/pipeline/outputs/people_in_park/tracks.json"
+  }
+}
